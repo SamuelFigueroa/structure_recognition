@@ -1,0 +1,50 @@
+{
+  "name": "structure_recognition",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prod-build": "webpack --config webpack.prod.js",
+    "prod": "node --require dotenv/config --require @babel/register server.js",
+    "start:prod": "npm run prod-build & npm run prod",
+    "dev-build": "webpack -wd --config webpack.dev.js",
+    "dev": "nodemon --ignore public/ --exec node --require dotenv/config --require @babel/register server.js",
+    "start:dev": "npm run dev-build & npm run dev"
+  },
+  "author": "Samuel Figueroa-Lazu",
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0",
+    "@material-ui/core": "^3.1.0",
+    "@material-ui/icons": "^3.0.1",
+    "apollo-cache-inmemory": "^1.2.9",
+    "apollo-client": "^2.4.1",
+    "apollo-link-http": "^1.5.9",
+    "apollo-server-express": "^2.0.4",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "graphql": "^0.13.2",
+    "graphql-tag": "^2.9.2",
+    "pug": "^2.0.3",
+    "react": "^16.4.1",
+    "react-apollo": "^2.1.5",
+    "react-dom": "^16.4.1",
+    "react-router-dom": "^4.3.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/node": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "babel-eslint": "^8.2.3",
+    "babel-loader": "^8.0.0",
+    "eslint": "^4.19.1",
+    "eslint-plugin-react": "^7.9.1",
+    "nodemon": "^1.17.5",
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.0.7",
+    "webpack-merge": "^4.1.4"
+  }
+}
